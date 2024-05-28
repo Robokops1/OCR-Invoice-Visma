@@ -52,8 +52,7 @@ def process_image(image_path, threshold=0.5):
     image = cv2.imread(image_path)
     #image = preprocess_image(image)
 
-    model_dir = 'dir'  #Model location
-
+    model_dir = os.path.join(os.getcwd(), 'kods', 'Models', 'BEST')
     model_path = os.path.join(model_dir, 'best.pt')
     
     class_colors = {
